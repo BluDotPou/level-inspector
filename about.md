@@ -10,5 +10,5 @@ me, me and me
 # coming soon:
 * A button of see the level creator without exit the level
 
-
+dont use "confirm exit", this make bugs
 <img src="logo.png" width="150" alt="the mod's logo" />

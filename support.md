@@ -1,1 +1,1 @@
-see my YT channel: https:/youtube.com/@bludotpou
+see my YT channel for support this mod: https:/youtube.com/@bludotpou
