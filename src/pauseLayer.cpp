@@ -58,8 +58,8 @@ class $modify(LevelInspectorPauseLayer, PauseLayer) {
         auto level = pl->m_level;
         std::string text;
 
-        text += "<cg>Nivel</c>: " + levelinspector::toStdString(level->m_levelName) + "\n";
-        text += "<cg>Creador</c>: " + levelinspector::toStdString(level->m_creatorName) + "\n";
+        text += "<cg>Level</c>: " + levelinspector::toStdString(level->m_levelName) + "\n";
+        text += "<cg>creator</c>: " + levelinspector::toStdString(level->m_creatorName) + "\n";
         text += "<cg>Level ID</c>: " + std::to_string(level->m_levelID.value()) + "\n";
         text += "<cg>Stars</c>: " + std::to_string(level->m_stars.value()) + "\n";
         text += "<cg>Song ID</c>: " + std::to_string(level->m_songID) + "\n";
@@ -67,9 +67,8 @@ class $modify(LevelInspectorPauseLayer, PauseLayer) {
         text += "<cp>Downloads</c>: " + std::to_string(level->m_downloads) + "\n";
         text += "<cp>Likes</c>: " + std::to_string(level->m_likes) + "\n";
         text += "<cp>Level Length</c>: " + std::to_string(level->m_levelLength) + "\n";
-        text += "<co>Tiempo jugado</c>: " + levelinspector::formatTime(levelinspector::elapsedSeconds());
+        text += "<co>time played</c>: " + levelinspector::formatTime(levelinspector::elapsedSeconds());
 
-        // POPUP FIX (sin romper el juego)
         geode::createQuickPopup(
             "Level Inspector",
             text,
