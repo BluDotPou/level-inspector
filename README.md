@@ -1,15 +1,15 @@
-# Level-Inspector
-This is a beatiful mod which adds 2 buttons in the pause menu
+This is a beatiful mod which adds ¿3 buttons in the pause menu
 
 # Buttons
 * Leaderboard button: see the leaderboard withuot exit of the level
 * "?" button: see the info of the level (and more) without ecit of the level
+* A button with the modder's logo that opens the level creator's profile
 
 # thanks to:
 me, me and me
 
 # coming soon:
-* A button of see the level creator without exit the level
+* Secrets :3
 
-dont use "confirm exit", this make bugs
+
 <img src="logo.png" width="150" alt="the mod's logo" />
