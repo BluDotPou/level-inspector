@@ -10,6 +10,3 @@ me, me and me
 
 # coming soon:
 * Secrets :3
-
-
-<img src="logo.png" width="150" alt="the mod's logo" />
