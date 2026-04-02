@@ -6,6 +6,7 @@
 #include <Geode/binding/GJGameLevel.hpp>
 #include <Geode/ui/BasedButtonSprite.hpp>
 #include <Geode/binding/LevelLeaderboard.hpp>
+#include <Geode/binding/ProfilePage.hpp>
 
 #include "shared/levelInspector.hpp"
 
@@ -18,11 +19,10 @@ class $modify(LevelInspectorPauseLayer, PauseLayer) {
         auto menu = static_cast<CCMenu*>(this->getChildByID("right-button-menu"));
         if (!menu) return;
 
-        // boton INFO
+        // BOTÓN INFO
         if (!menu->getChildByID("info-button")) {
-            auto sprite = CircleButtonSprite::create(
-                CCSprite::create("boton.png"_spr)
-            );
+            auto icon = CCSprite::create("boton.png"_spr);
+            auto sprite = CircleButtonSprite::create(icon);
 
             auto infoBtn = CCMenuItemSpriteExtra::create(
                 sprite,
@@ -34,7 +34,7 @@ class $modify(LevelInspectorPauseLayer, PauseLayer) {
             menu->addChild(infoBtn);
         }
 
-        // BOToN LEADERBOARD
+        // BOTÓN LEADERBOARD
         if (!menu->getChildByID("leaderboard-button")) {
             auto sprite = CCSprite::create("leaderboard.png"_spr);
 
@@ -46,6 +46,21 @@ class $modify(LevelInspectorPauseLayer, PauseLayer) {
 
             leaderboardBtn->setID("leaderboard-button");
             menu->addChild(leaderboardBtn);
+        }
+
+        // BOTÓN CREADOR
+        if (!menu->getChildByID("creator-button")) {
+            auto sprite = CCSprite::create("moder.png"_spr);
+            sprite->setScale(2.0f);
+
+            auto creatorBtn = CCMenuItemSpriteExtra::create(
+                sprite,
+                this,
+                menu_selector(LevelInspectorPauseLayer::openCreatorOfTheLevel)
+            );
+
+            creatorBtn->setID("creator-button");
+            menu->addChild(creatorBtn);
         }
 
         menu->updateLayout();
@@ -94,5 +109,14 @@ class $modify(LevelInspectorPauseLayer, PauseLayer) {
         );
 
         if (leaderboard) leaderboard->show();
+    }
+
+    void openCreatorOfTheLevel(CCObject*) {
+        auto pl = PlayLayer::get();
+        if (!pl || !pl->m_level) return;
+
+        auto settings = ProfilePage::create(pl->m_level->m_accountID, false);
+
+        if (settings) settings->show();
     }
 };
