@@ -3,7 +3,7 @@ This is a beatiful mod which adds 3 buttons in the pause menu
 # Buttons
 * Leaderboard button: see the leaderboard withuot exit of the level
 * "?" button: see the info of the level (and more) without ecit of the level
-* A button with the modder's logo that opens the level creator's profile
+* A button that opens the level creator's profile
 
 # thanks to:
 me, me and me
