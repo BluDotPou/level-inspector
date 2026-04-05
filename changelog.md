@@ -16,7 +16,7 @@ new ver only for geode, nothing new
 
 ### Compatibility
 
-* Not available on iOS (security reasons)
+* For all devices
 
 ### Fixes
 
